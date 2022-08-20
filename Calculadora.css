@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(#54ADC7, #1A5268);
+}
+
+.grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 90px);
+}
+
+.grid > button {
+  cursor: pointer;
+  font-size: 1.9rem;
+  border: none;
+  outline: none;
+  background-color: #050C25;
+  color: #E1E1E1;
+}
+
+.grid > button.span {
+  border-bottom-left-radius: 10px;
+  background: #EE6F28;
+  grid-column: span 3;
+}
+
+.grid > button.ac{
+  background: #0B173A;
+  font-size: 1.4rem;
+}
+
+.grid > button.operador{
+  background: #0B173A;
+}
+
+#mais {
+  border-bottom-right-radius: 10px;
+}
+
+.grid > button.del{
+  font-size: 1.5rem;
+}
+
+.grid > button:hover {
+  background-color: white;
+  color: #172D68;
+}
+
+.grid > .output {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  grid-column: 1 / -1;
+  background: #9DB3EE;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.grid > .output > .previous-operand {
+  color: #0B173A;
+  font-size: 1.5rem;
+}
+
+.grid > .output > .current-operand {
+  color: #0B173A;
+  font-size: 2.5rem;
+}
